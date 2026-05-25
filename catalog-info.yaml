@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-catalog
+  description: API CRUD de itens do catálogo
+  annotations:
+    github.com/project-slug: TourinhoM/app-catalog
+    backstage.io/kubernetes-id: app-catalog
+    prometheus.io/rule: app_catalog
+  tags:
+    - nodejs
+    - fastify
+    - postgresql
+spec:
+  type: service
+  lifecycle: production
+  owner: team-alpha
+  dependsOn:
+    - resource:postgresql
+  providesApis:
+    - catalog-api
