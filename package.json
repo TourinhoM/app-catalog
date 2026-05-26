@@ -1,6 +1,6 @@
 {
   "name": "app-catalog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CRUD de itens — referência de plataforma engineering",
   "main": "src/index.js",
   "scripts": {
@@ -8,9 +8,16 @@
     "dev": "node --require @opentelemetry/auto-instrumentations-node/register --watch src/index.js"
   },
   "dependencies": {
-    "@opentelemetry/auto-instrumentations-node": "^0.56.0",
-    "fastify": "^4.29.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.75.0",
+    "fastify": "^5.7.2",
     "pg": "^8.13.0",
     "prom-client": "^15.1.3"
+  },
+  "overrides": {
+    "cross-spawn": "7.0.5",
+    "minimatch": "9.0.7",
+    "tar": "7.5.11",
+    "glob": "10.5.0",
+    "protobufjs": "8.0.2"
   }
 }
